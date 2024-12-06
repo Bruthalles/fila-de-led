@@ -3,44 +3,32 @@
 int tempo = 150;
  
 
-void setup()
-{
-	pinMode(13, OUTPUT);
+void setup(){
+
+    pinMode(13, OUTPUT);
     pinMode(11, OUTPUT);
     pinMode(8, OUTPUT);
     pinMode(5, OUTPUT);
     pinMode(3, OUTPUT);
     pinMode(2, OUTPUT);
+	
+function piscar(porta){
+	int porta;
+	digitalWrite(porta,  HIGH);
+	delay(tempo);
+  	digitalWrite(porta,  LOW);
+		
+	}
   
 }
 
-void loop()
-{
-  digitalWrite(13,  HIGH);
-  delay(tempo);
-  digitalWrite(13,  LOW);
-  
-  digitalWrite(11, HIGH);
-  delay(tempo);
-  digitalWrite(11,  LOW);
-  
-  digitalWrite(8,  HIGH);
-  delay(tempo);
-  digitalWrite(8,  LOW);
-  
-  digitalWrite(5,  HIGH);
-  delay(tempo);
-  digitalWrite(5,  LOW);
-  
-  digitalWrite(3,  HIGH);
-  delay(tempo);
-  digitalWrite(3,  LOW);
-  
-  digitalWrite(2,  HIGH);
-  delay(tempo);
-  digitalWrite(2,  LOW);
+void loop(){
+    piscar(13);
+    piscar(11);
+    piscar(8);
+    piscar(5);
+    piscar(3);
+    piscar(2);
   
   delay(tempo);
- 
-  
 }
